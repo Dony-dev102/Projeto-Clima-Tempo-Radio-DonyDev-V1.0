@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <title>DonyDev - Weather & Radio</title>
+</head>
+<body>
+    <video autoplay muted loop playsinline id="video-bg">
+        <source src="./video/video1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <main class="container">
+        <div class="procura">
+            <input id="input-busca" placeholder="Buscar cidade..." type="text">
+            <button onclick="cliqueNoBotao()">
+                <img src="./assets/lupa.png" width="20">
+            </button>
+        </div>
+
+        <div class="envelope">
+            <div class="card">
+                <img class="icone-tempo" src="https://openweathermap.org/img/wn/10d@4x.png">
+                <h2 class="nome-cidade">Cidade</h2>
+                <h3 class="temperatura">--°C</h3>
+            </div>
+
+            <div class="card">
+                <h2>RÁDIOS AO VIVO</h2>
+                <audio id="audio-player" controls></audio>
+                <div class="lista-radios">
+                    <div class="radio-item" onclick="tocar('https://cloud.cdnseguro.com:2010/;')">📻 Metropolitana FM</div>
+                    <div class="radio-item" onclick="tocar('https://antenaone.crossradio.com.br/stream/1;?1770514519389;')">📻 Rádio Antena 1 94.7 FM</div>
+                    <div class="radio-item" onclick="tocar('https://radio901.webnimbus.cloud/radioalpha/icecast.audio?1770515310297')">📻 Rádio Alpha 90.1 FM</div>
+                    <div class="radio-item" onclick="tocar('https://server21.srvsh.com.br:8508/;?1770515203411')">📻 Rádio Alfa 103.9 FM</div>
+                    <div class="radio-item" onclick="tocar('https://stream-151.zeno.fm/3ywickpd3rkvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzeXdpY2twZDNya3Z2IiwiaG9zdCI6InN0cmVhbS0xNTEuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Ijc3M3BsRk9vUzF5ME5HRHpNbWp0NkEiLCJpYXQiOjE3NzA1MTU0NTcsImV4cCI6MTc3MDUxNTUxN30.dwSeeQMxJehw3CpeWU9z0nLHwf10u3agfmfMfkplGn8&1770515457276')">📻 
+Rádio Anos 80 FM</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="dev-signature">
+            <span class="prompt">></span> Desenvolvido por Dony_Dev | Backend & Full Stack Developer: <span class="user">Clima&Tempo&musica</span> <span class="cursor">_</span>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
