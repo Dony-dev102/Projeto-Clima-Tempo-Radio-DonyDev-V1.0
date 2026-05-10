@@ -9,17 +9,25 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-color: #000; /* Fundo da página preto */
+    margin: 0;
+    overflow-x: hidden;
 }
 
 #video-bg {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: -1;
+    background-color: #000; /* Fundo do próprio vídeo preto */
+    transition: opacity 0.8s ease-in-out;
 }
 
 .overlay {
+    ackground: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
